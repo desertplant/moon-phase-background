@@ -28,4 +28,3 @@ There is an option to get a higher resolution image(8192x5641, default is 5641x3
 Other than that i have added a lot of comments to make the code easy to understand. 
 It is very short and simple so you can configure anything you want, you can change the background, the configuration the text, anything really.
 
-# Let me know if you find any issues, or give me feedback or customization ideas.
