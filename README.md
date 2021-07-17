@@ -23,11 +23,9 @@ Just download all the files and put them in some folder. Then run the script in 
 I made mine excecutable from anywhere and added a cron job to automatically update the background every 12 hours. (If you don't know how to do that, google it it's easy.
 
 # Configuration:
-There is an option to get a higher resolution image(8192x5641, default is 5641x3650), it is commented in the code if you want to turn it on. You just have to set isbig=true.
+ - Resolution: There is an option to get a higher resolution image(8192x5641, default is 5641x3650), it is commented in the code if you want to turn it on. You just have to set isbig=true. You can also set an even lower resoltion but you're going to half to do the work yourself. It's possible though and fairly easy.
 
-If your display size is different from mine you might have to play around with some settings, (like the text field position).
+- If your display size is different from mine you might have to play around with some settings, (like the text field position).
 
-You can customize anything you want, including the background image, the text, anything! I have added comments to make the code easy to understand
-
-It is very short and simple.
+- You can customize anything you want, including the background image, the text, anything! I have added comments to make the code easy to understand. It is very short and simple.
 
