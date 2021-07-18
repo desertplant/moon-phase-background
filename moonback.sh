@@ -16,7 +16,7 @@ phase=$(sed "$num q;d" phase.txt)
 age=$(sed "$num q;d" age.txt)
 #caption
 text="Phase: $phase% Days: $age     "
-im="moon.$(($(date +"%j")*24-25+$(date +"%H"))).tif"
+im="moon.$(($(date +"%j")*24-24+$(date +"%H"))).tif"
 
 if [ $isbig = true ]
 then
