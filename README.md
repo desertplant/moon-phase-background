@@ -35,9 +35,9 @@ Or you can have it automatically update in certain time intervalls. To do this y
 
 - Positioning: If your display size is different from mine you might have to play around with some settings, (like the text field position).
 
--Background Image: You can use your own image as a background image. Just make sure it is large enough and it is in the .tif format. Then just replace the best_small.tif file with your image and rename yours to best_small.tif  (Unless you have isbig=on, then best.tif instead of best_small.tif)
+ - Background Image: You can use your own image as a background image. Just make sure it is large enough and it is in the .tif format. Then just replace the best_small.tif file with your image and rename yours to best_small.tif  (Unless you have isbig=on, then best.tif instead of best_small.tif)
 
--System: If you are not running Linux Mint Cinnamon, all you have to do is edit the gsettings line: (line 40). Find out what command you need to replace the background image on your system. Just google it and its probably better to test it out in the command line first. Then edit the line to work for you. For example, in gnome, I'm pretty sure you only have to replace the word cinnamon to gnome and leave everything else the same. I haven't tested it though.
+ - System: If you are not running Linux Mint Cinnamon, all you have to do is edit the gsettings line: (line 40). Find out what command you need to replace the background image on your system. Just google it and its probably better to test it out in the command line first. Then edit the line to work for you. For example, in gnome, I'm pretty sure you only have to replace the word cinnamon to gnome and leave everything else the same. I haven't tested it though.
 
 - Anything. You can customize anything else you want! I have added comments to make the code easy to understand. It is very short and simple.
 
