@@ -14,7 +14,7 @@ If you have cinnamon these are most likely pre-installed.
  - bash
  - curl
  - ImageMagick
- - Linux Mint Cinnamon (although you can have it run on most other distros and DEs by editing only 1 line. See below under configuration.
+ - Linux Mint Cinnamon (**although** you can have it run on most other distros and DEs by editing only 1 line. See below under configuration. I plan on making this work for all Desktops automatically soon.
  - year 2021 (the code only works until the end of 2021, then it needs to be updated)
 
 
