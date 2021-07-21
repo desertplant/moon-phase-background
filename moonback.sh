@@ -9,14 +9,14 @@ wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 cd $wdir
 
 #get current hour of the year
-num=$(($(date +"%j")*24-24+$(date +"%H")))
+num=$((10#$(date --utc +"%j")*24-24+10#$(date --utc +"%H")))
 #get illumination% from text file I edited down from one found here "https://svs.gsfc.nasa.gov/vis/a000000/a004800/a004874/"
 phase=$(sed "$num q;d" phase.txt)
 #days in moon cycle so far
 age=$(sed "$num q;d" age.txt)
 #caption
 text="Phase: $phase% Days: $age     "
-im="moon.$(($(date +"%j")*24-24+$(date +"%H"))).tif"
+im="moon.$num.tif"
 
 if [ $isbig = true ]
 then
