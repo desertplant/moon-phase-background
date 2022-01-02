@@ -1,7 +1,7 @@
 # moon-phase-background
 Change background picture to high resolution picture of the current moon phase from NASA
 
-I wrote a bash script which downloads a high resolution image of the current moon phase from NASAs Dial-A-Moon website "https://svs.gsfc.nasa.gov/4874", adds it onto a background image of stars, labels the image with the Illumination % and the Age of the Moon Cycle  and sets it as a background image on Linux Mint Cinnamon.
+I wrote a bash script which downloads a high resolution image of the current moon phase from NASAs Dial-A-Moon website "https://svs.gsfc.nasa.gov/48955", adds it onto a background image of stars, labels the image with the Illumination % and the Age of the Moon Cycle  and sets it as a background image on Linux Mint Cinnamon.
 
 best.tif is an example picture. (Resolution 5641x3650 by default, 8192x5641 is possible too.)
 
@@ -15,7 +15,7 @@ If you have cinnamon these are most likely pre-installed.
  - curl
  - ImageMagick
  - Linux Mint Cinnamon (**although** you can have it run on most other distros and DEs by editing only 1 line, the one which changes the background picture. See below under configuration. I plan on making this work for all Desktops automatically soon. Also i believe someone forked it and made a version for gnome.)
- - year 2021 (the code only works until the end of 2021, then it needs to be updated, which I will do at the end of 2021)
+ - year 2022 (the code only works until the end of 2022, then it needs to be updated, which I will do at the end of 2022)
 
 
 # Installation:
@@ -45,7 +45,7 @@ And/Or you can have it automatically update in certain time intervalls. To do th
 Let me know if you need help configuring anything or want me to add anything.
 
  # Deinstallation. 
-  To uninstall simply delete the folder wit hall the files you downloaded. Don't forget to remove any Cronjobs, launchers or references (f.e. in bashrc or startup applications), you mayy have created.
+  To uninstall simply delete the folder with all the files you downloaded. Don't forget to remove any Cronjobs, launchers or references (f.e. in bashrc or startup applications), you may have created.
  
  
  # Image Credits:
