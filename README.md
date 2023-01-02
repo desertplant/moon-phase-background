@@ -15,7 +15,7 @@ If you have cinnamon these are most likely pre-installed.
  - curl
  - ImageMagick
  - Linux Mint Cinnamon (**although** you can have it run on most other distros and DEs by editing only 1 line, the one which changes the background picture. See below under configuration. I plan on making this work for all Desktops automatically soon. Also i believe someone forked it and made a version for gnome.)
- - year 2022 (the code only works until the end of 2022, then it needs to be updated, which I will do at the end of 2022)
+ - year 2022 (the code only works until the end of 2023, then it needs to be updated, which I will do at the end of 2023)
 
 
 # Installation:
@@ -49,7 +49,7 @@ Let me know if you need help configuring anything or want me to add anything.
  
  
  # Image Credits:
- The moon phase image is downloaded from NASA's Dial-A-Moon website:https://svs.gsfc.nasa.gov/4874. Thank you to NASA's Scientific Visualization Studio for creating these high resolution visualizations of the moon and making them available to the public. For more information about how these images were created and on the moon itself, see the the link above.
+ The moon phase image is downloaded from NASA's Dial-A-Moon website:https://svs.gsfc.nasa.gov/5048. Thank you to NASA's Scientific Visualization Studio for creating these high resolution visualizations of the moon and making them available to the public. For more information about how these images were created and on the moon itself, see the the link above.
  
  # Example Image:
  
