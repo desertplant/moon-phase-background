@@ -49,7 +49,7 @@ then
 else
 #  curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a004800/a004874/frames/5760x3240_16x9_30p/plain/$im"   # 2021
 #	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a004900/a004955/frames/5760x3240_16x9_30p/plain/$im"   # 2022
-   curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005048/frames/5760x3240_16x9_30p/plain/$im"   # 2023
+   curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005048/frames/3840x2160_16x9_30p/plain/$im"   # 2023
 
 	wait
 	#replace orginal file with designated background file and add background and caption with imagemagick 
