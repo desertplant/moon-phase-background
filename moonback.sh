@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
-# changed to work in 2022
-# by ALF 01.01.2022
+#updated for 2023
 
-#isbig=false means background  5641x3650, moon image = 3840x2160, download 5,562MB
-#isbig=true means background  8192x5641, moon image = 5760x3240, download 12MB
-isbig=true
+#isbig=false means background  5641x3650, moon image = 3840x2160, download ~ 5MB
+#isbig=true means background  8192x5641, moon image = 5760x3240, download ~ 12MB
+isbig=false
 
 #go into directory of script no matter where it is called.
 wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
@@ -14,7 +13,7 @@ cd $wdir
 #get current hour of the year
 num=$((10#$(date --utc +"%j")*24-23+10#$(date --utc +"%H")))
 echo "Hour of Year: "$num
-#get illumination% from text file I edited down from one found here "https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005048/mooninfo_2023.txt"
+#get phase/illumination% from text file edited from "https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005048/mooninfo_2023.txt"
 phase=$(sed "$num q;d" phase.txt)
 echo "Phase: "$phase
 #days in moon cycle so far
@@ -23,18 +22,13 @@ echo "Age: "$age
 #caption
 text="Phase: $phase% Days: $age     "
 
-####################################### 
-# im="moon.$num.tif"                  #
-# had to be changed for 2022,2023 to: #
-im="moon.$(printf "%04d" $num).tif"   #
-#######################################
+# filename for dowloaded image
+im="moon.$(printf "%04d" $num).tif" 
 
 echo "Insert: "$text
 echo "File to download: "$im
 
-##############################
-# New URLS for 2022,2023 !!! #
-##############################
+#URLs updated for 2023
 
 if [ $isbig = true ]
 then
