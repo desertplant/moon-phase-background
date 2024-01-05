@@ -1,7 +1,7 @@
 # moon-phase-background
 Change background picture to high resolution picture of the current moon phase from NASA
 
-This bash script downloads a high resolution image of the current moon phase from NASAs Dial-A-Moon website https://svs.gsfc.nasa.gov/5048, adds it onto a background image of stars, labels the image with the phase in percent and the age of the current moon cycle and sets it as a background image on Linux Mint Cinnamon.
+This bash script downloads a high resolution image of the current moon phase from NASAs Dial-A-Moon website https://svs.gsfc.nasa.gov/5187/, adds it onto a background image of stars, labels the image with the phase in percent and the age of the current moon cycle and sets it as a background image on Linux Mint Cinnamon.
 
 best.tif is an example picture. (Resolution 5641x3650 by default, 8192x5641 is possible too.)
 
@@ -15,7 +15,7 @@ In Linux Mint Cinnamon most likely pre-installed:
  - curl
  - ImageMagick
  - Cinnamon (for other environments please see below under Configuration)
- - 2023 (NASA Link changes every year. Script will be updated for 2024)
+ - 2024 (NASA Link changes every year. Script will be updated for 2025)
 
 
 ## Installation:
@@ -47,7 +47,7 @@ To automatically update in certain time intervals you can set a cron job. Note t
 
  - **System**: 
     - made for Linux Mint Cinnamon
-    - easily adjustable for other systems by editing line 40
+    - adjustable for other systems by editing line 40
     - for gnome just replace the word cinnamon with gnome in line 40
 
  ## Uninstall 
@@ -55,7 +55,7 @@ To automatically update in certain time intervals you can set a cron job. Note t
  
  
  ## Image Credits:
- The moon phase image is downloaded from NASA's Dial-A-Moon website: https://svs.gsfc.nasa.gov/5048/. Thank you to NASA's Scientific Visualization Studio for creating these high resolution visualizations of the moon and making them available to the public. For more information about how these images were created and on the moon itself, see the the link above.
+ The moon phase image is downloaded from NASA's Dial-A-Moon website: https://svs.gsfc.nasa.gov/5187/. Thank you to NASA's Scientific Visualization Studio for creating these high resolution visualizations of the moon and making them available to the public. For more information about how these images were created and on the moon itself, see the the link above.
  
  ## Example Image:
  

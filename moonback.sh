@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#updated for 2023
+# updated for 2024
 
 #isbig=false means background  5641x3650, moon image = 3840x2160, download ~ 5MB
 #isbig=true means background  8192x5641, moon image = 5760x3240, download ~ 12MB
@@ -13,10 +13,10 @@ cd $wdir
 #get current hour of the year
 num=$((10#$(date --utc +"%j")*24-23+10#$(date --utc +"%H")))
 echo "Hour of Year: "$num
-#get phase/illumination% from text file edited from "https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005048/mooninfo_2023.txt"
+#get phase/illumination% from text file edited from "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005187/mooninfo_2024.txt"
 phase=$(sed "$num q;d" phase.txt)
 echo "Phase: "$phase
-#days in moon cycle so far
+#age: days in moon cycle so far
 age=$(sed "$num q;d" age.txt)
 echo "Age: "$age
 #caption
@@ -28,22 +28,17 @@ im="moon.$(printf "%04d" $num).tif"
 echo "Insert: "$text
 echo "File to download: "$im
 
-#URLs updated for 2023
-
+#URLs updated for 2024
 if [ $isbig = true ]
 then
-#  curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a004800/a004874/frames/5760x3240_16x9_30p/plain/$im"   # 2021
-#	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a004900/a004955/frames/5760x3240_16x9_30p/plain/$im"   # 2022
-   curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005048/frames/5760x3240_16x9_30p/plain/$im"   # 2023
+	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005187/frames/5760x3240_16x9_30p/plain/$im"	#2024
 
 	wait
 	#replace orginal file with designated background file and add background and caption with imagemagick
 	composite -gravity center $im best.tif back.tif 
 	convert -font ubuntu -fill '#b1ada7' -pointsize 80 -gravity east -draw "text 150,1800 '$text'" back.tif back.tif
 else
-#  curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a004800/a004874/frames/5760x3240_16x9_30p/plain/$im"   # 2021
-#	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a004900/a004955/frames/5760x3240_16x9_30p/plain/$im"   # 2022
-   curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005048/frames/3840x2160_16x9_30p/plain/$im"   # 2023
+	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005187/frames/3840x2160_16x9_30p/plain/$im"	# 2024
 
 	wait
 	#replace orginal file with designated background file and add background and caption with imagemagick 
