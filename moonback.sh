@@ -4,7 +4,10 @@
 
 #isbig=false means background  5641x3650, moon image = 3840x2160, download ~ 5MB
 #isbig=true means background  8192x5641, moon image = 5760x3240, download ~ 12MB
-isbig=false
+isbig=false # change this line to change image size
+
+#CA Certificate 
+CA_CERT_PATH="svs-gsfc-nasa-gov-chain.pem"
 
 #go into directory of script no matter where it is called.
 wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
@@ -31,14 +34,14 @@ echo "File to download: "$im
 #URLs updated for 2024
 if [ $isbig = true ]
 then
-	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005187/frames/5760x3240_16x9_30p/plain/$im"	#2024
+	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005187/frames/5760x3240_16x9_30p/plain/$im" --cacert $CA_CERT_PATH	# verfiy CA cert
 
 	wait
 	#replace orginal file with designated background file and add background and caption with imagemagick
 	composite -gravity center $im best.tif back.tif 
 	convert -font ubuntu -fill '#b1ada7' -pointsize 80 -gravity east -draw "text 150,1800 '$text'" back.tif back.tif
 else
-	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005187/frames/3840x2160_16x9_30p/plain/$im"	# 2024
+	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005187/frames/3840x2160_16x9_30p/plain/$im" --cacert $CA_CERT_PATH	# verfiy CA cert
 
 	wait
 	#replace orginal file with designated background file and add background and caption with imagemagick 
