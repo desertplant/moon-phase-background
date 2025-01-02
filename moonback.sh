@@ -4,7 +4,7 @@
 
 #isbig=false means background  5641x3650, moon image = 3840x2160, download ~ 5MB
 #isbig=true means background  8192x5641, moon image = 5760x3240, download ~ 12MB
-isbig=false # change this line to change image size
+isbig=false
 
 #go into directory of script no matter where it is called.
 wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
@@ -14,6 +14,7 @@ cd $wdir
 num=$((10#$(date --utc +"%j")*24-23+10#$(date --utc +"%H")))
 echo "Hour of Year: "$num
 #get phase/illumination% from text file edited from "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005187/mooninfo_2024.txt"
+# or current equivalent 
 phase=$(sed "$num q;d" phase.txt)
 echo "Phase: "$phase
 #age: days in moon cycle so far
@@ -28,19 +29,17 @@ im="moon.$(printf "%04d" $num).tif"
 echo "Insert: "$text
 echo "File to download: "$im
 
-#URLs updated for 2024
+#URLs updated for 2025
 if [ $isbig = true ]
 then
-	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005187/frames/5760x3240_16x9_30p/plain/$im" --insecure #insecure means skipping CA certificate verification
- #this means that the url is trusted without CA cert verification. If you would like you can remove this and download the certificate and verify it.
+	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005400/a005415/frames/5760x3240_16x9_30p/plain/$im"   # 2025
 
 	wait
 	#replace orginal file with designated background file and add background and caption with imagemagick
 	composite -gravity center $im best.tif back.tif 
 	convert -font ubuntu -fill '#b1ada7' -pointsize 80 -gravity east -draw "text 150,1800 '$text'" back.tif back.tif
 else
-	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005187/frames/3840x2160_16x9_30p/plain/$im" --insecure	#insecure means skipping CA certificate verification
- #this means that the url is trusted without CA cert verification. If you would like you can remove this and download the certificate and verify it.
+	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005400/a005415/frames/3840x2160_16x9_30p/plain/$im"   # 2025
 
 	wait
 	#replace orginal file with designated background file and add background and caption with imagemagick 

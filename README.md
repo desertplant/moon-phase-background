@@ -15,7 +15,7 @@ In Linux Mint Cinnamon most likely pre-installed:
  - curl
  - ImageMagick
  - Cinnamon (for other environments please see below under Configuration)
- - 2024 (NASA Link changes every year. Script will be updated for 2025)
+ - 2025 (NASA Link changes every year. Script will be updated for 2026)
 
 
 ## Installation:
