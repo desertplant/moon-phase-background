@@ -13,7 +13,7 @@ cd $wdir
 #get current hour of the year
 num=$((10#$(date --utc +"%j")*24-23+10#$(date --utc +"%H")))
 echo "Hour of Year: "$num
-#get phase/illumination% from text file edited from "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005187/mooninfo_2024.txt"
+#get phase/illumination% from text file edited from "https://svs.gsfc.nasa.gov/vis/a000000/a005500/a005587/mooninfo_2026.txt"
 # or current equivalent 
 phase=$(sed "$num q;d" phase.txt)
 echo "Phase: "$phase
@@ -29,17 +29,17 @@ im="moon.$(printf "%04d" $num).tif"
 echo "Insert: "$text
 echo "File to download: "$im
 
-#URLs updated for 2025
+#URLs updated for 2026
 if [ $isbig = true ]
 then
-	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005400/a005415/frames/5760x3240_16x9_30p/plain/$im"   # 2025
+	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005500/a005587/frames/5760x3240_16x9_30p/plain/$im"   # 2026
 
 	wait
 	#replace orginal file with designated background file and add background and caption with imagemagick
 	composite -gravity center $im best.tif back.tif 
 	convert -font ubuntu -fill '#b1ada7' -pointsize 80 -gravity east -draw "text 150,1800 '$text'" back.tif back.tif
 else
-	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005400/a005415/frames/3840x2160_16x9_30p/plain/$im"   # 2025
+	curl -LO "https://svs.gsfc.nasa.gov/vis/a000000/a005500/a005587/frames/3840x2160_16x9_30p/plain/$im"   # 2026
 
 	wait
 	#replace orginal file with designated background file and add background and caption with imagemagick 
