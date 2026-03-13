@@ -1,5 +1,4 @@
-2025# moon-phase-background
-Change background picture to high resolution picture of the current moon phase from NASA
+A lightweight Bash utility that dynamically updates the desktop background based on the current moon phase.
 
 This bash script downloads a high resolution image of the current moon phase from NASAs Dial-A-Moon website https://svs.gsfc.nasa.gov/5587/, adds it onto a background image of stars, labels the image with the phase in percent and the age of the current moon cycle and sets it as a background image on Linux Mint Cinnamon.
 
